@@ -1,11 +1,17 @@
 <html>
   <body>
+    <div>X: <span id="x"></span></div>
+    <div>Y: <span id="y"></span></div>
+    <div>Z: <span id="z"></span></div>
     <script>
       window.addEventListener("devicemotion", (dat) => {
         console.log('x', dat.accelerationIncludingGravity.x); 
-        console.log(dat.accelerationIncludingGravity.y);
-        console.log(dat.accelerationIncludingGravity.z);
-    });
+        console.log('y', dat.accelerationIncludingGravity.y);
+        console.log('z', dat.accelerationIncludingGravity.z);
+        document.getElementById('x').innerHTML = dat.accelerationIncludingGravity.x;
+        document.getElementById('y').innerHTML = dat.accelerationIncludingGravity.y;
+        document.getElementById('z').innerHTML = dat.accelerationIncludingGravity.z;
+      });
     </script>
   </body>
 </html>
