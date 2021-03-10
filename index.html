@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <script>
+      window.addEventListener("devicemotion", (dat) => {
+        console.log('x', dat.accelerationIncludingGravity.x); 
+        console.log(dat.accelerationIncludingGravity.y);
+        console.log(dat.accelerationIncludingGravity.z);
+    });
+    </script>
+  </body>
+</html>
