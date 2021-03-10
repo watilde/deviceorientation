@@ -10,9 +10,6 @@
     <div>Z: <span id="zz"></span></div>
     <script>
       window.addEventListener("devicemotion", (dat) => {
-        console.log('x', dat.accelerationIncludingGravity.x); 
-        console.log('y', dat.accelerationIncludingGravity.y);
-        console.log('z', dat.accelerationIncludingGravity.z);
         document.getElementById('x').innerHTML = dat.accelerationIncludingGravity.x;
         document.getElementById('y').innerHTML = dat.accelerationIncludingGravity.y;
         document.getElementById('z').innerHTML = dat.accelerationIncludingGravity.z;
@@ -20,12 +17,9 @@
     </script>
     <script>
       window.addEventListener('devicemotion', function(e) {
-            var x   = e.acceleration.x,
-            y   = e.acceleration.y,
-            z   = e.acceleration.z;
-        document.getElementById('xx').innerHTML = x;
-        document.getElementById('yy').innerHTML = y;
-        document.getElementById('zz').innerHTML = z;    
+        document.getElementById('xx').innerHTML = e.acceleration.x;
+        document.getElementById('yy').innerHTML = e.acceleration.y;
+        document.getElementById('zz').innerHTML = e.acceleration.z;
     }, false);
     </script>
   </body>
