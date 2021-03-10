@@ -1,8 +1,13 @@
 <html>
   <body>
+    <h1>傾き</h1>
     <div>X: <span id="x"></span></div>
     <div>Y: <span id="y"></span></div>
     <div>Z: <span id="z"></span></div>
+    <h1>加速度</h1>
+    <div>X: <span id="xx"></span></div>
+    <div>Y: <span id="yy"></span></div>
+    <div>Z: <span id="zz"></span></div>
     <script>
       window.addEventListener("devicemotion", (dat) => {
         console.log('x', dat.accelerationIncludingGravity.x); 
@@ -12,6 +17,16 @@
         document.getElementById('y').innerHTML = dat.accelerationIncludingGravity.y;
         document.getElementById('z').innerHTML = dat.accelerationIncludingGravity.z;
       });
+    </script>
+    <script>
+      window.addEventListener('dvicemotion', function(e) {
+            var x   = e.acceleration.x,
+            y   = e.acceleration.y,
+            z   = e.acceleration.z;
+        document.getElementById('xx').innerHTML = x;
+        document.getElementById('yy').innerHTML = y;
+        document.getElementById('zz').innerHTML = z;    
+    }, false);
     </script>
   </body>
 </html>
