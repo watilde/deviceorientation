@@ -16,7 +16,7 @@
       });
     </script>
     <script>
-      window.addEventListener('devicemotion', function(e) {
+      window.addEventListener('devicemotion', (e) => {
         document.getElementById('xx').innerHTML = e.acceleration.x;
         document.getElementById('yy').innerHTML = e.acceleration.y;
         document.getElementById('zz').innerHTML = e.acceleration.z;
